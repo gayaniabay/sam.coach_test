@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/framework.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="../src/js/script.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row nav">
+            <div class="col-lg-2">
+                <img src="./assets/images/sam_logo.png" class="nav__logo" alt="sam">
+                <span class="verticle-line"></span>
+            </div>
+            <div class="col-lg-8 align-right">
+                <button>+&nbsp;Client</button>
+                <button>+&nbsp;Meeting</button>
+                <button>CRM SYNC</button>
+                <div class="mobile-menu">
+                    <span onclick="toggleNav()"><i class="fa fa-bars"></i></span>
+                    <img src="../src/assets/images/profile_user.jpg" alt="user image" class="nav__user__img" onclick="toggleUser()">
+                </div>
+                <div class="nav__user" id="user_menu">
+                    <ul>
+                        <span class="verticle-line"></span>
+                        <li>Agenda</li>
+                        <span class="verticle-line"></span>
+                        <li><i class="fa fa-cog"></i></li>
+                        <span class="verticle-line"></span>
+                        <li>
+                            <span class="notification">2</span>
+                            <i class="fa fa-bell"></i>
+                        </li>
+                        <span class="verticle-line margin-0-10"></span>
+                        <li>
+                            <div>
+                                <img src="../src/assets/images/profile_user.jpg" alt="user image" class="nav__user__img">
+                            </div>
+                        </li>
+                        <li class="margin-0-10">
+                            <span class="nav__user-name">Jason Bourne</span>
+                            <span class="text-small">Last Login 16/01/2019</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-chevron-down"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row flex-row">
+            <div class="col-lg-25 flex-row left-menu closed" id="left_menu">
+                <div class="left-nav">
+                    <ul>
+                        <li><i class="fa fa-home"></i></li>
+                        <li class="active"><i class="fa fa-id-badge"></i></li>
+                        <li><i class="fa fa-calendar-check-o"></i></li>
+                        <li><i class="fa fa-edit"></i></li>
+                        <li><i class="fa fa-dollar"></i></li>
+                        <li><i class="fa fa-bar-chart-o"></i></li>
+                        <li><i class="fa fa-file"></i></li>
+                    </ul>
+                </div>
+                <div class="sub-menu">
+                    <h3>Meeting Preparation</h3>
+                    <ul>
+                        <li>Agenda</li>
+                        <li>Attendees</li>
+                        <li class="selected">Objectives</li>
+                        <li>Equipment</li>
+                        <li>Resources</li>
+                        <li>Sales</li>
+                        <li>Marketing</li>
+                        <li>News</li>
+                        <li>Social media</li>
+                        <li>Business</li>
+                        <li>Purchases</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-75 col-sm-10">
+                <div class="details-block">
+                    <!-- search grid -->
+                    <form>
+                        <div class="row search-grid">
+                            <div>
+                                <select name="date">
+                                    <option value="1">07/02/2020</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select name="name">
+                                    <option value="1">Joanna Campbell</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select name="company">
+                                    <option value="" disabled selected>Company</option>
+                                </select>
+                            </div>
+                            <div class="search flex-row">
+                                <i class="fa fa-search"></i>
+                                <input type="text" placeholder="Search">
+                            </div>
+                        </div>
+                    </form>
+                    <!-- /search grid -->
+                    <div class="row title">
+                        <h3>Objectives</h3>
+                        <button class="button--title">Question Composer</button> 
+                    </div>
+                    <!-- Objectives table -->
+                    <div class="row">
+                        <table class="table">
+                            <tr>
+                                <th>Number</th>
+                                <th>Proposed Discussion Points</th>
+                                <th>Stakeholder</th>
+                                <th>Title</th>
+                                <th>Time Allocation</th>
+                                <th>
+                                    <button class="button--table"><i class="fa fa-pencil"></i></button>
+                                    Status
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td title="Understand Alcheme's operating environment,company culture test">
+                                    <p class="ellipsis">Understand Alcheme's operating environment,company culture test</p>
+                                </td>
+                                <td>Joanna Campbell</td>
+                                <td>CIO</td>
+                                <td>15 mins</td>
+                                <td><span class="status status--green">90%</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Understand some of the key challenges that Alcheme IT terms are facing </td>
+                                <td>Joanna Campbell</td>
+                                <td>CIO</td>
+                                <td>20 mins</td>
+                                <td><span class="status status--blue">70%</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Define the requirements of what is trying to accomplish with the </td>
+                                <td>Jason Bourne</td>
+                                <td>BDM</td>
+                                <td>20 mins</td>
+                                <td><span class="status status--blue">70%</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Understand the constrains surrounding project </td>
+                                <td>Nashi Purcell</td>
+                                <td>BA</td>
+                                <td>10 mins</td>
+                                <td><span class="status status--red">50%</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- /Objectives table -->
+                    <!-- Recommendations -->
+                    <div class="row card">
+                        <div class="card-title">
+                            <h4>Recommendations</h4>
+                        </div>
+                        <div class="card-tabs">
+                            <ul>
+                                <li class="active">CEO</li>
+                                <li>CIO</li>
+                                <li>CFO</li>
+                                <li>COO</li>
+                                <li>IT Manager</li>
+                                <li>Applications Manager</li>
+                                <li>Infrastructure Manager</li>
+                                <li>PM</li>
+                                <li>BA</li>
+                                <li>Super User</li>
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="accor-row">
+                                <button class="button--accordion"><i class="fa fa-plus"></i></button>
+                                <p>Understand &lt;company&gt; strategic objectives for the next 5 year</p>
+                            </div>
+                            <div class="accor-row">
+                                <button class="button--accordion"><i class="fa fa-plus"></i></button>
+                                <p>Understand &lt;company&gt; core service offering</p>
+                            </div>
+                            <div class="accor-row">
+                                <button class="button--accordion"><i class="fa fa-plus"></i></button>
+                                <p>Understand &lt;company&gt; operating environment, culture and business objectives</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Recommendations -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
